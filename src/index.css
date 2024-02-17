@@ -1,0 +1,10 @@
+.scroll-container {
+    white-space: nowrap; /* Запрет переноса строк */
+    overflow-x: auto; /* Включение горизонтального скролла */
+    -ms-overflow-style: none; /* Удаление стандартного стиля скролла для IE 10+ */
+    scrollbar-width: none; /* Удаление стандартного стиля скролла для Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Удаление стандартного стиля скролла для WebKit (Chrome, Safari, etc.) */
+}
