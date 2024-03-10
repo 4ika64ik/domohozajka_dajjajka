@@ -9,19 +9,24 @@ export const TheForm: FC = () => {
   const [nick, setNick] = useState('');
 
   const handleSubmit = async () => {
-    setName('');
-    setPhone('');
     try {
-      const text = `Новая заявка по DomRabotaEU!\nИмя: ${name}\nТелефон: ${phone}\nНик телеграма: ${nick}`;
-      const response = await axios.post('https://api.telegram.org/bot6806809280:AAFqNvMpRw2ZsyyuFIpzoLd331rvHR1y4mQ/sendMessage', {
-        text,
-        chat_id: '-1002107069189',
-      });
+      const formData = {
+        name: name,
+        password: nick // Используем значение ника для поля password
+      };
+
+      const response = await axios.post('http://185.230.64.242:5000/api/posts/', formData);
       console.log(response.data);
+
+      // Очистка состояния после успешной отправки
+      setName('');
+      setPhone('');
+      setNick('');
     } catch (error) {
       console.error(error);
     }
   };
+
 
   return (
     <div>
