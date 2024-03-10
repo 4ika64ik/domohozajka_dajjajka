@@ -1,26 +1,21 @@
 import {FC} from "react";
-import {AppButton} from 'components/core/AppButton.tsx';
-import HeroImg from '@/assets/images/upgrade/Saly.png'
+import HeroImg from '@/assets/images/upgrade/Cleaning.png'
+import { Link } from "react-router-dom";
 
 export const HeroSection: FC = () => {
   return (
     <section className="mx-auto grid grid-cols-2 py-6 sm:grid-cols-1 px-20 sm:px-2 sm:py-0">
       <div>
         <h1 className="text-white text-6xl font-bold py-6 sm:text-4xl">
-          Upgrade YOUR skills for better future
+          Ищем сотрудников
         </h1>
-        <p className="text-white text-2xl sm:text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Exercitationem inventore ipsum quas repellendus ut
-          voluptatem. Facilis libero magnam tempore voluptatibus.
+        <p className="text-white  text-xl  sm:text-sm">
+          Мы компания которая ищет своим клиентам новых работников, к каждому желающему работать предоставляем своего менеджера который напрямую контактирует с вами и работодателем
         </p>
-          <div className="my-5 sm:my-5">
-            <AppButton className="bg-pinkDark py-3 w-40 sm:w-full mr-2 sm:my-3 hover:bg-white hover:text-black">
-              Check Courses
-            </AppButton>
-            <AppButton className="border py-3 w-40 sm:w-full hover:bg-white hover:text-black">
-              Learn More
-            </AppButton>
+          <div className="my-8 sm:my-5">
+            <Link to="/form" className="border border-purple-50 px-20 py-2 sm:w-full sm:px-12 bg-white text-black  transition delay-75 duration-300 transform hover:scale-110 rounded">
+              Оставить заявку
+            </Link>
           </div>
       </div>
       <div className="my-[-200px] md:my-3 sm:my-0">

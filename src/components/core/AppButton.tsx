@@ -21,7 +21,7 @@ export const AppButton: FC<TAppButton> = ({ children, color, ...props }) => {
   return (
     <button
       {...props}
-      className={`text-white transition w-40 py-2 font-normal rounded-lg lg:w-36 lg:py-2 lg:text-xl md:text-lg md:w-40 sm:text-sm sm:w-full
+      className={`text-white transition w-56 py-2 font-normal rounded-lg lg:w-36 lg:py-2 lg:text-xl md:text-lg md:w-40 sm:text-sm sm:w-full
         ${getColor(color)}
         ${props.className || ''}`
       }

@@ -1,27 +1,27 @@
 import { FC } from "react";
-import Key from '@/assets/icons/OurFeatures/Key.svg';
-import Monitor from '@/assets/icons/OurFeatures/Monitor.svg';
-import GetCertificate from '@/assets/icons/OurFeatures/Group.svg';
-import User from '@/assets/icons/OurFeatures/User.svg';
-import BadgeCheck from '@/assets/icons/OurFeatures/BadgeCheck.svg';
-import BestPrice from '@/assets/icons/OurFeatures/BestPrice.svg';
 
-const Icons = [Key, Monitor, GetCertificate];
-const Icons2 = [User, BadgeCheck, BestPrice];
-const Title = ['Life Time Access', 'Online Classes', 'Get Certificate', 'Expert Trainers', 'Great Result', 'Best Price'];
+const Title = [
+  'Зп от 2700€ в месяц',
+  'Выплата дважды в месяц ',
+  'Предоставляем комфортное жилье и питание',
+];
+
+
+const Content = [
+  'Заработок от 2700€ в месяц. Мы так же стремимся создать среду, где каждый сотрудник чувствует себя важным и ценным членом команды, и где их потребности учитываются и поддерживаются на протяжении всего времени работы.',
+  'Наша компания не только предлагает конкурентоспособную заработную плату от 2700€ в месяц, но и обеспечивает уникальные условия труда для наших сотрудников. Наше главное преимущество – это система двойной выплаты заработной платы, которая позволяет получать стабильный доход дважды в месяц, обеспечивая финансовую уверенность и стабильность.',
+  'Помимо всего этого, мы также обеспечиваем наших сотрудников качественным и разнообразным питанием, чтобы поддерживать их здоровье и энергию на протяжении рабочего дня.',
+];
+
 
 export const CardFeatures: FC = () => {
   return (
     <div className="grid justify-center mx-32 my-20 md:mx-2 sm:mx-2">
-      <div className="grid grid-cols-3 gap-20 mx-auto sm:grid-cols-1 sm:text-center">
-        {Icons.map((icon, index) => (
+      <div className="grid grid-cols-3 gap-20 mx-auto sm:grid-cols-1 text-center">
+        {Title.map((_, index) => (
           <div key={index}>
-            <img className="sm:mx-auto sm:my-auto" src={icon} alt="icon" />
-            <h3 className="text-2xl font-bold sm:text-center">{Title[index]}</h3>
-            <p className="text-lightGray text-xl sm:text-sm sm:text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet in porttitor in sit sem eu, nunc diam. Quis nisi</p>
-            <img className="sm:mx-auto sm:my-auto" src={Icons2[index]} alt="icon" />
-            <h3 className="text-2xl font-bold sm:text-center">{Title[index]}</h3>
-            <p className="text-lightGray text-xl sm:text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet in porttitor in sit sem eu, nunc diam. Quis nisi</p>
+            <h3 className="text-2xl font-bold sm:text-center text-center">{Title[index]}</h3>
+            <p className="text-lightGray text-xl sm:text-sm ">{Content[index]}</p>
           </div>
         ))}
       </div>
