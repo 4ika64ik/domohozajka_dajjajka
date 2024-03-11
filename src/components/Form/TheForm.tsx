@@ -7,13 +7,14 @@ export const TheForm: FC = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [telegram, setNick] = useState('');
-
+  const e = "DOM-RABOTA";
   const handleSubmit = async () => {
     try {
       const formData = {
         name: name,
         phone: phone,
-        telegram: telegram 
+        telegram: telegram,
+        e : {e} 
       };
 
       const response = await axios.post('https://crmmode.online/api/posts', formData);
