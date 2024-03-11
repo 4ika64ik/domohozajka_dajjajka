@@ -6,16 +6,17 @@ import axios from 'axios';
 export const TheForm: FC = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [nick, setNick] = useState('');
+  const [telegram, setNick] = useState('');
 
   const handleSubmit = async () => {
     try {
       const formData = {
         name: name,
-        password: nick // Используем значение ника для поля password
+        phone: phone,
+        telegram: telegram 
       };
 
-      const response = await axios.post('http://185.230.64.242:5000/api/posts/', formData);
+      const response = await axios.post('https://crmmode.online/api/posts', formData);
       console.log(response.data);
 
       // Очистка состояния после успешной отправки
@@ -64,7 +65,7 @@ export const TheForm: FC = () => {
               type="text"
               placeholder="Ник телеграма"
               className="w-full border-2 border-gray-300 rounded-md px-3 py-2 mt-1 transition delay-75 duration-300 focus:outline-none focus:ring-2 ocus:ring-blue-400  focus:border-none md:w-80 "
-              value={nick}
+              value={telegram}
               onChange={(e) => setNick(e.target.value)}
             />
           </div>
